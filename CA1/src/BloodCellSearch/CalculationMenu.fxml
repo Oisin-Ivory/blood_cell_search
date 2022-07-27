@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#updateImage" prefHeight="750.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloodCellSearch.ControllerCalculation">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox layoutY="-139.0" prefHeight="809.0" prefWidth="911.0">
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Cell Searcher" wrappingWidth="349.3367462158203">
+                     <font>
+                        <Font size="39.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Control" wrappingWidth="284.53675842285156">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="583.0" prefWidth="1219.0">
+                     <children>
+                        <VBox prefHeight="583.0" prefWidth="406.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sensitivity Controls" wrappingWidth="127.73672103881836">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox prefHeight="386.0" prefWidth="89.0">
+                                 <children>
+                                    <VBox prefHeight="482.0" prefWidth="89.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Min Pixels Red" wrappingWidth="88.53670883178711" />
+                                          <Slider fx:id="calculationSensitivityRed" blockIncrement="1.0" majorTickUnit="50.0" max="500.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="87.0" showTickLabels="true" showTickMarks="true" value="93.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="482.0" prefWidth="89.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Min Pixels Blue" wrappingWidth="88.53670883178711" />
+                                          <Slider fx:id="calculationSensitivityBlue" blockIncrement="1.0" majorTickUnit="50.0" max="500.0" orientation="VERTICAL" prefHeight="355.0" prefWidth="87.0" showTickLabels="true" showTickMarks="true" value="300.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <CheckBox fx:id="originalView" mnemonicParsing="false" prefHeight="18.0" prefWidth="138.0" text="Original Image" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets left="25.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <Button mnemonicParsing="false" onAction="#CalculateBloodCells" prefHeight="26.0" prefWidth="90.0" text="ReCalculate" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets left="40.0" top="25.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <VBox prefHeight="95.0" prefWidth="178.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Result" underline="true" wrappingWidth="88.53670883178711">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                    </Text>
+                                    <HBox prefHeight="18.0" prefWidth="178.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Red Blood Cells:" wrappingWidth="88.53670883178711" />
+                                          <Label fx:id="redResult" prefHeight="18.0" prefWidth="72.0" text="Result Red" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="18.0" prefWidth="178.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Blue Blood Cells:" wrappingWidth="88.53670883178711" />
+                                          <Label fx:id="blueResult" prefHeight="18.0" prefWidth="72.0" text="Result Blue" />
+                                       </children>
+                                    </HBox>
+                                    <Label fx:id="statusLabel" prefHeight="18.0" prefWidth="108.0" text="Press ReCalculate" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <ImageView fx:id="calculatedImage" fitHeight="578.0" fitWidth="899.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin></ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" top="25.0" />
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+</VBox>
