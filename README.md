@@ -6,13 +6,13 @@ This app was written in Java and makes use of [JavaFX](https://openjfx.io//) and
 
 
 <div style="width:100%">
-<img src=".public/fileselect.png" width="170" align="left">
-<img src=".public/mainmenu.png" width="170" align="left">
+<img src=".public/fileselect.png" width="400" align="left">
+<img src=".public/mainmenu.png" width="400" align="left">
 </div>
 <div style="width:100%">
-<img src=".public/sensitivityoptions.png" width="170" align="left">
-<img src=".public/highlightedcells.png" width="170" align="left">
+<img src=".public/sensitivityoptions.png" width="400" align="left">
+<img src=".public/highlightedcells.png" width="400" align="left">
 </div>
 <div style="width:100%">
-<img src=".public/posterview.png" width="170" align="left">
+<img src=".public/posterview.png" width="400" align="left">
 </div>
